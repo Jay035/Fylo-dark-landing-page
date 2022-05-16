@@ -18,10 +18,12 @@ section.light{
 
 a{
     text-decoration: none;
+    color: #fff;
 }
 
 li{
     list-style: none;
+    cursor: pointer;
 }
 
 button,a{
@@ -117,8 +119,8 @@ nav img{
     /* font-weight: bold; */
 }
 
-nav a:hover, .footer a:hover{
-    text-decoration: underline #fff;
+nav li:hover, .footer a:hover{
+    text-decoration: 2px underline #fff;
 }
 
 /* hero-section styles */
