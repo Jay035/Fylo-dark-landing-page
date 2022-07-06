@@ -63,33 +63,44 @@ nav img{
     height: 2px;
     background: white;
 }
-@media (max-width: 767px){
+@media (max-width: 600px){
     .menu{
         display: none;
-        text-align: left;
+        text-align: center;
         list-style-type: none; 
         background: white;
         padding: 1rem;
-        width: 60%;
-        height: 100vh;
+        width: 100%;
+        height: 40vh;
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
         z-index: 99999;
         transition: all 0.3s ease-in;
+    }
+
+    ul{
+        position: relative;
+        top: 4em;
     }
     
     .menu li{
         color: hsl(218, 28%, 13%);
+        transition: .2s ease;
+    }
+
+    .menu li:hover{
+        font-weight: 600;
     }
 }
 
 .close-btn{
     display: flex;
     flex-direction: column;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
     cursor: pointer;
-    transform: translateX(250px);
+    position: absolute;
+    right: 1em;
 }
 
 .close-btn .bar{
@@ -107,7 +118,14 @@ nav img{
 }
 
 .menu.active{
-    display: block;
+    display: flex;
+    justify-content: center;
+}
+
+.menu.active ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .menu.active div{
@@ -373,7 +391,7 @@ address{
     color: cyan; 
 }
 
-@media (min-width:768px){
+@media (min-width:601px){
     nav{
         padding:2rem 1.5rem;
     }
